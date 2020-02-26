@@ -1,158 +1,149 @@
 import React, { Component } from "react";
-// import ReactDOM from "react-dom";
-// import $ from 'jquery';
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
 
-import "./index.css";
 
 class List extends Component {
-  // componentDidMount() {
-  //   $("#accordion").accordion({
-  //     collapsible: true
-  //   });
-  // }
-
-
   render() {
     return (
-      <div className="col-md-2">
-        <div className="row">
-          <div id="accordion">
-            <h6>Accounts</h6>
-            <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <h6>Reports</h6>
-            <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <h6>Residents</h6>
-            <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <h6>Traffic</h6>
-            <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <h6>Charges</h6>
-            <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <h6>Unit</h6>
-            <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <h6>Work Orders</h6>
-            <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <h6>System Utilities</h6>
-            <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <h6>Help</h6>
-            <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div >
+      <Accordion>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="0">
+            Accounts
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="0">
+            <Card.Body>
+              <p>Accounts</p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="1">
+            Reports
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="1">
+            <Card.Body>
+              <p>Residents</p>
+              <p>Traffic</p>
+              <p>Transactions</p>
+              <p>Unit</p>
+              <p>Work Orders</p>
+              <p>Misc Property</p>
+              <p>Weekly</p>
+              <p>Month End</p>
+              <p>All Reports</p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="2">
+            Residents
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="2">
+            <Card.Body>
+              <p>Add Pending Residents</p>
+              <p>Make Canceled Pending</p>
+              <p>Resident Data Update</p>
+              <p>Resident Listing</p>
+              <p>Resident Reports</p>
+              <p>Bulk Letters</p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="3">
+            Traffic
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="3">
+            <Card.Body>
+              <p>New Traffic</p>
+              <p>Edit/Update Traffic</p>
+              <p>Traffic List</p>
+              <p>Combine Traffic</p>
+              <p>Move Traffic</p>
+              <p>Add Roomate to Current</p>
+              <p>Traffic Reports</p>
+              <p>Screening</p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="4">
+            Charges
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="4">
+            <Card.Body>
+              <p>Post Transaction</p>
+              <p>Bulk Payments</p>
+              <p>Bulk HUD Payments</p>
+              <p>Online Payment Disburse</p>
+              <p>Import Future Transactions</p>
+              <p>Multiple Charges/Payments</p>
+              <p>Multi Service Charges</p>
+              <p>Apply Late Charges</p>
+              <p>NSF</p>
+              <p>Move In/Out Prorates</p>
+              <p>Charges/Payment Reports</p>
+              <p>Post Bank Deposit</p>
+              <p>Find Check</p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="5">
+            Unit
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="5">
+            <Card.Body>
+              <p>Edit Unit</p>
+              <p>Unit Maintenance Reports</p>
+              <p>Work Orders By Unit</p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="6">
+            Work Orders
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="6">
+            <Card.Body>
+              <p>Work Order Dashboard</p>
+              <p>New Work Order</p>
+              <p>Edit/Close Work Orders</p>
+              <p>Bulk Close Work Orders</p>
+              <p>Bulk Print Work Orders</p>
+              <p>Work Order Reports</p>
+              <p>Work Order Categories</p>
+              <p>Work Orders By Unit</p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="7">
+            System Utilities
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="7">
+            <Card.Body>
+              <p>System Date</p>
+              <p>Accounting Export</p>
+              <p>Import Utilities</p>
+              <p>Reverse Utilities</p>
+              <p>Property Contact</p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+        <Card>
+          <Accordion.Toggle as={Card.Header} eventKey="8">
+            Help
+          </Accordion.Toggle>
+          <Accordion.Collapse eventKey="8">
+            <Card.Body>
+              <p>Help Documentation</p>
+            </Card.Body>
+          </Accordion.Collapse>
+        </Card>
+      </Accordion>
     );
   }
 }
 export default List;
-{/* <table>
-  <tbody>
-    <tr>Accounts</tr>
-    <tr></tr>
-    <tr>Reports</tr>
-    <tr></tr>
-    <tr>Residents</tr>
-    <tr></tr>
-    <tr>Traffic</tr>
-    <tr></tr>
-    <tr>Charges</tr>
-    <tr></tr>
-    <tr>Unit</tr>
-    <tr></tr>
-    <tr>Work orders</tr>
-    <tr>
-      <td>
-        <div>
-          <table>
-            <tbody>
-              <tr id="listitems">New Work order</tr>
-              <tr id="listitems">edit/Close Work order</tr>
-            </tbody>
-          </table>
-        </div>
-      </td>
-    </tr>
-    <tr>System Utilities</tr>
-    <tr></tr>
-    <tr>Help</tr>
-    <tr></tr>
-  </tbody>
-</table> */}
-{/* <div className="col-md-12">
-            <h6>Accounts Payable</h6>
-          </div>
-          <div className="col-md-12">
-            <h6>Reports</h6>
-          </div>
-          <div className="col-md-12">
-            <h6>Residents</h6>
-          </div>
-          <div className="col-md-12">
-            <h6>Traffic</h6>
-          </div>
-          <div className="col-md-12">
-            <h6>charges</h6>
-          </div>
-          <div className="col-md-12">
-            <h6>Unit</h6>
-          </div>
-          <div className="col-md-12">
-            <h6>Work Orders</h6>
-          </div>
-          <div className="col-md-12">
-            <h6>System Utilities</h6>
-          </div>
-          <div className="col-md-12">
-            <h6>Help</h6>
-          </div> */}

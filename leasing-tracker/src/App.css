@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+p {
+  font-size: 12px;
+}
+body {
+  background-color: midnightblue;
+}
+.container {
+  background-color: white;
+}
+#nav {
+  background-color: steelblue;
+}
